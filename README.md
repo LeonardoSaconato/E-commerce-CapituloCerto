@@ -7,8 +7,14 @@ Este repositório servirá para armazenar os códigos-fonte utilizados no projet
 **Professor:** Alvaro
 
 ## Integrantes
- | NOME COMPLETO                                    | TURMA |
- |-----------|--------------------------------------|-------|
+ | NOME COMPLETO                                     | TURMA |
+ |---------------------------------------------------|-------|
+ | Douglas Sadi da Silva                             |   8   |
+ | Igor Sandes                                       |   8   |  
+ | Leandro dos Remédios Campos                       |   8   |
+ | Leandro Carvalho                                  |   8   |
+ | Leonardo Saconato de Santana                      |   8   |
+ | Manoel Elias                                      |   8   |
 
 
 ## Link do Prototípo do Projeto
