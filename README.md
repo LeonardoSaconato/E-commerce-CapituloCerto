@@ -28,16 +28,16 @@ Este repositório servirá para armazenar os códigos-fonte utilizados no projet
 ## Etapas do Projeto
 
 **Sprint-I: Definição do tema e desenvolvimento do Layout do projeto**
-Data entrega: 26/10
-Status: Entregue
+* Data entrega: 26/10
+* Status: Entregue
 
 **Sprint-II: Criação da estrutura HTML das páginas**
-Data entrega: 02/11
-Status: Entregue
+* Data entrega: 02/11
+* Status: Entregue
 
 **Sprint-III: Telas do E-commerce**
-Data entrega: --
-Status: --
+* Data entrega: --
+* Status: --
 
 
 ## Endereço da aplicação
