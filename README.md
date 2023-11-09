@@ -61,4 +61,4 @@ O grupo optou por dividir o desenvolvimento de cada etapa do projeto, mas todos 
 |  Leonardo Saconato                |Elaboração da Pagína 3 - Login & Cadastro        |
 |  Leandro Carvalho                 |Elaboração da Pagína 4 - Carrinho de Compras     |
 |  Douglas Sadi e Leandro Campos    |Elaboração da Pagína 5 - Detalhes sobre os livros|
- 
+ .
