@@ -14,8 +14,9 @@
                 <span><h1>Capítulo Certo</h1></span>
             </div>
             <div class="pesquisa">
-                <input type="text" id="buscar" name="buscar" placeholder="Buscar...">
+                <input type="text" id="buscar" name="buscar" placeholder="Buscar..." onkeyup="pesquisar()">
                 <img src="imagens/lupa.png" alt="" id="lupa">
+                <script src="./js/buscar.js">buscar</script>
             </div>
             <nav>
                 <ul class="icones-nav">
@@ -30,128 +31,9 @@
                 <img src="imagens/slbar1 (2).png" alt="Imagem 2">
                 <img src="imagens/slbar1 (3).png" alt="Imagem 3">
             </div>
-                <script src="js/script.js">carrosel</script>
+                <script src="js/carrossel.js">carrosel</script>    
             <div class="livros">
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/analise-de-trafego-tcp.html" target="_self" rel="next"><img src="imagens/analise-de-trafego-tcp.jpg" alt="Análise TCP/IP" class="capa-livros"></a>
-                        <h2>Análise TCP/IP</h2>
-                        <h3>R$ 86,49</h3>
-                        <h3>Gênero: Análise de Redes</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/codigo-limpo.html" target="_self" rel="next"><img src="imagens/codigo-limpo.jpg" alt="Código Limpo" class="capa-livros"></a>
-                        <h2>Código Limpo</h2>
-                        <h3>R$ 100,00</h3>
-                        <h3>Gênero: Desenvolvimento</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/html-e-css-guia-pratico.html" target="_self" rel="next"><img src="imagens/guia-pratico-html-css.jpg" alt="HTML e CSS: Guia Prático" class="capa-livros"></a>
-                        <h2>HTML e CSS: Guia Prático</h2>
-                        <h3>R$ 113,57</h3>
-                        <h3>Gênero: Desenvolvimento</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/introducao-a-python.html" target="_self" rel="next"><img src="imagens/introducao-python.jpg" alt="Introdução a Python" class="capa-livros"></a>
-                        <h2>Introdução a Python</h2>
-                        <h3>R$ 66,75</h3>
-                        <h3>Gênero: Desenvolvimento</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/java-como-programar.html" target="_self" rel="next"><img src="imagens/java-como-programar.jpg" alt="Java: Como Programar" class="capa-livros"></a>
-                        <h2>Java: Como Programar</h2>
-                        <h3>R$ 270,00</h3>
-                        <h3>Gênero: Desenvolvimento</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/redes-de-computadores.html" target="_self" rel="next"><img src="imagens/redes-de-computadores.jpg" alt="Redes de Computadores" class="capa-livros"></a>
-                        <h2>Redes de Computadores</h2>
-                        <h3>R$:205,00</h3>
-                        <h3>Gênero: Redes</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/sistemas-operacionais.html" target="_self" rel="next"><img src="imagens/sistemas-operacionais.jpg" alt="Sistemas Operacionais" class="capa-livros"></a>
-                        <h2>Sistemas Operacionais</h2>
-                        <h3>R$ 280,00</h3>
-                        <h3>Gênero: Sistemas Operacionais</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/sql-para-leigos.html" target="_self" rel="next"><img src="imagens/sql-para-leigos.jpg" alt="SQL Para Leigos" class="capa-livros"></a>
-                        <h2>SQL Para Leigos</h2>
-                        <h3>R$ 92,40</h3>
-                        <h3>Gênero: Banco de Dados</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/tecnicas-de-invasao.html" target="_self" rel="next"><img src="imagens/tecnicas-de-invasao.jpg" alt="Técnicas de Invasão" class="capa-livros"></a>
-                        <h2>Técnicas de Invasão</h2>
-                        <h3>R$ 49,73</h3>
-                        <h3>Gênero: Hacking</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                            <a href="sinopses-html/use-a-cabeca.html" target="_self" rel="next"><img src="imagens/use-a-cabeca.jpg" alt="Use a cabeça! PHP e MySQL" class="capa-livros"></a>
-                        <h2>Use a cabeça! PHP e MySQL</h2>
-                        <h3>R$ 60,00</h3>
-                        <h3>Gênero: Desenvolvimento e Banco de Dados</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                        <img src="imagens/livro_padrao.jpg" alt="" class="capa-livros">
-                        <h2>TÍTULO DO LIVRO</h2>
-                        <h3>R$ 00,00</h3>
-                        <h3>Gênero</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                        <img src="imagens/livro_padrao.jpg" alt="" class="capa-livros">
-                        <h2>TÍTULO DO LIVRO</h2>
-                        <h3>R$ 00,00</h3>
-                        <h3>Gênero</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                        <img src="imagens/livro_padrao.jpg" alt="" class="capa-livros">
-                        <h2>TÍTULO DO LIVRO</h2>
-                        <h3>R$ 00,00</h3>
-                        <h3>Gênero</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                        <img src="imagens/livro_padrao.jpg" alt="" class="capa-livros">
-                        <h2>TÍTULO DO LIVRO</h2>
-                        <h3>R$ 00,00</h3>
-                        <h3>Gênero</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-livros">
-                        <img src="imagens/livro_padrao.jpg" alt="" class="capa-livros">
-                        <h2>TÍTULO DO LIVRO</h2>
-                        <h3>R$ 00,00</h3>
-                        <h3>Gênero</h3>
-                    </div>
-                </div>         
+                <script src="js/livros.js">livros</script>   
             </div>
         </main>
         <footer>

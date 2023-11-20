@@ -1,20 +1,20 @@
-/* Zera as margens e preenchimentos padrão do body, h1 e p */
-body{
+*{
     margin: 0;
     padding: 0;
+}
+body{
     background: linear-gradient(to bottom, #000000, #ffffff);
     font-family: sans-serif;
+    width: 100%;
 }
-
-/* Estilização do header */
 header {
+    width: auto;
     display: flex;
-    justify-content: space-around; /* Centraliza os elementos horizontalmente */
+    justify-content: space-around; 
     align-items: center;
-    height: 60px;
+    height: auto;
     background-color: rgb(0, 0, 0);
     position: relative;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 1); /* Efeito de sombra */
 }
 .logo{
     align-items: center;
@@ -26,16 +26,20 @@ h1{
 }
 h2{
     color: rgb(18, 19, 104);
+    font-size: 110%;
 }
 h3{
     color: rgb(0, 0, 0);
+    font-size: 100%;
 }
-/* Estilização do elemento com classe "pesquisa" */
+input:focus{
+    outline:none;
+}
 .pesquisa { 
     background-color:#ffffff;
     border:solid 1px;
     border-radius:15px;
-    width:30%;
+    width:400px;
 }
 #buscar{
     float:left;
@@ -52,7 +56,6 @@ h3{
     height: 25px;
     cursor: pointer;
 }
-/* Estilização dos ícones de navegação */
 .icones-nav img{
     width: 30px;
     height: 30px;
@@ -63,82 +66,121 @@ h3{
     filter: brightness(3);
 }
 .carrossel{
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;/* Centraliza verticalmente (opcional)*/ 
-    /*height: 100vh;  Defina uma altura de 100% da altura da janela (opcional) */
-    box-shadow: 6px 6px 6px rgb(0, 0, 0);
+    width: 100%;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
 }
 .carrossel img{
-    align-items: center;
     width: 100%;
-    display: none;
-    height: auto;
+    height:100%;
 }
-
 .caroussel img:first-child {
-    display: block; /* Exiba a primeira imagem por padrão */
+    display: block;
 }
-/* Estilização da navegação */
 nav ul {
-    list-style: none; /* Remove os marcadores de lista padrão */
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
 nav ul li {
-    margin-right: 10px; /* Adiciona um espaço entre os itens do menu */
+    margin-right: 10px; 
 }
-
-/* Estilização do conteúdo principal */
 main {
     text-align: center;
     align-items: center;
 }
 .livros {
+    padding: 2rem;
     align-items: center;
     text-align: center;
-    max-width: 95%;
-    margin: auto;
     display: grid;
-    grid-template-columns: 225px 225px 225px 225px 225px;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando a largura da página for menor */
-    justify-content: space-between; /* Espaço igual entre os itens, pode escolher outras opções, como 'flex-start', 'center', etc. */   
+    grid-template-columns: 18rem 18rem 18rem 18rem 18rem;
+    justify-content: space-between;
+}
+
+@media (min-width: 1900px){
+    .livros {
+        grid-template-columns: 18rem 18rem 18rem 18rem 18rem 18rem;
+    }
+}
+@media (max-width: 1899px) {
+    .livros {
+        grid-template-columns:18rem 18rem 18rem 18rem;
+    }
+}
+@media (max-width: 1300px) {
+    .livros {
+        grid-template-columns: 18rem 18rem 18rem;
+    }
+}
+@media (max-width: 1000px){
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    header *{
+        justify-content: center;
+        align-items: center;
+        margin: 2;
+    }
+    .caroussel{
+        order: 1;
+    }
+    .pesquisa{
+        width: auto;
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+        order: 3;
+    }
+    .icones-nav{
+        display: flex;
+        order: 0;
+    }
+    .livros {
+        grid-template-columns: 21rem 21rem;
+    }
+}
+@media (max-width: 500px){
+    .livros {
+        grid-template-columns: 19rem;
+    }
+}
+.livros img{
+    width: auto;
+    height: 200px;
+    border-radius: 2px;
 }
 .info-livros:hover{
     scale: 1;
     cursor: pointer;
 }
 .info-livros{
-    width: 100%;
-    width: 100%;
-    padding: 10px;
-    margin: auto;
+    padding: 1.2rem;
     border-radius: 3%;
     background-color: rgb(255, 255, 255);
-    box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.3); /* Efeito de sombra */  
+    box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.3);
     scale: 0.8;
 }
-.capa-livros{
-    width: auto;
-    height: 200px;
-    border-radius: 2px;
+.info-livros *{
+    margin-top: 0.5rem;
 }
-/* Estilização do rodapé */
+
 footer {
-    margin-top: 20px;
+    height: auto;
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; 
     align-items: center;
-    height: 70px;
     background: linear-gradient(to bottom, #313131, #000000);
+    justify-content: space-between;
 }
 footer span{
     color: rgb(255, 255, 255);
-    margin-right: 70%;
     cursor: default;
+    margin: 2%;
 }
 .redes img{
     width: 30px;
