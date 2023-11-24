@@ -6,7 +6,6 @@
     top: 0;
     left: 0;
     background-color: #0000004b;
-    z-index: 999;
     align-items: center;
     justify-content: center;
     display: none;
@@ -17,7 +16,7 @@
     min-width:400px;
     min-height: 200px;
     background-color: #ffffff62;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /*Efeito Vidro*/
     padding: 50px;
     border-radius: 10px;
     text-align: center;
