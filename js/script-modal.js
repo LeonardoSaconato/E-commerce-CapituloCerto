@@ -15,6 +15,7 @@ function abrirModal()
 //abrir modal (pop-up) ao carregar a index.html
 window.onload = function() 
 {
+    //depois que aberto uma vez, não abre mais...para abrir, limpar cache navegador.
     var modalExibido = localStorage.getItem('modal-container');
     if (!modalExibido || modalExibido !== 'fechar') 
     {
