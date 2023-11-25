@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: linear-gradient(to bottom, #000000,#000000,#ffffff);
+    background: linear-gradient(to bottom, #000000, #ffffff);
     font-family: sans-serif;
     width: 100%;
 }
@@ -17,7 +17,6 @@ header {
     position: relative;
 }
 .logo{
-    scale: 0.8;
     align-items: center;
     display: flex;
     cursor: pointer;
@@ -144,7 +143,7 @@ main {
         grid-template-columns: 21rem 21rem;
     }
 }
-@media (max-width: 740px){
+@media (max-width: 500px){
     .livros {
         grid-template-columns: 19rem;
     }
@@ -175,7 +174,7 @@ footer {
     display: flex;
     justify-content: center; 
     align-items: center;
-    background: black;
+    background: linear-gradient(to bottom, #313131, #000000);
     justify-content: space-between;
 }
 footer span{
@@ -189,5 +188,5 @@ footer span{
     padding: 20px;
 }
 .redes-contato:hover{
-    filter: brightness(1.5);
+    filter: brightness(2);
 }
