@@ -42,10 +42,30 @@ header {
 }
 
 footer {
-    text-align: center;
     background-color: #232f3e;
     color: #fff;
-    padding: 2px;
+    padding-left: 13%;
+    gap: 25%;
+    display: flex;
+    justify-content: left; 
+    align-items: center;
+}
+
+footer span{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    margin: 2%;
+}
+
+.redes img{
+    width: 30px;
+    height: 30px;
+  
+}
+.redes-contato:hover{
+    filter: brightness(1.5);
 }
 
 .button {
