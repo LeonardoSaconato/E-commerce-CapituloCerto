@@ -85,3 +85,7 @@ footer span{
 .redes-contato:hover{
     filter: brightness(1.5);
 }
+
+.bthover:hover{
+    filter: brightness(1.5);
+}
