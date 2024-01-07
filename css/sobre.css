@@ -1,0 +1,22 @@
+body{
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+  h1{
+    color: darkblue;
+    text-align: center;
+}
+
+  p {
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2%;
+}
