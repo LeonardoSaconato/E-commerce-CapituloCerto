@@ -19,7 +19,7 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 120px;
     overflow: hidden;
 }
 
@@ -91,12 +91,13 @@ footer span{
 }
 
 /* Estilos para telas menores (como smartphones) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) 
+{
     .livro-container {
         padding: 10px;
         margin-top: 10px;
         margin-bottom: 10px;
-    
+    }
 
     .book-image {
         max-width: 100%;
@@ -121,7 +122,8 @@ footer span{
 }
 
 /* Estilos para tablets e telas maiores que 600px */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 601px) and (max-width: 1024px) 
+{
     .livro-container {
         max-width: 90%;
         padding: 15px;
