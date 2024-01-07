@@ -89,3 +89,50 @@ footer span{
 .bthover:hover{
     filter: brightness(1.5);
 }
+
+/* Estilos para telas menores (como smartphones) */
+@media screen and (max-width: 600px) {
+    .livro-container {
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    
+
+    .book-image {
+        max-width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .livro-detalhes {
+        float: none;
+        text-align: center;
+    }
+
+    footer {
+        padding-left: 5%;
+        gap: 10%;
+    }
+
+    footer span {
+        font-size: 18px;
+    }
+}
+
+/* Estilos para tablets e telas maiores que 600px */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .livro-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    footer {
+        padding-left: 8%;
+        gap: 15%;
+    }
+
+    footer span {
+        font-size: 20px;
+    }
+}
