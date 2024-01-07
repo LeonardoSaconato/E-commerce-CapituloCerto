@@ -96,14 +96,14 @@ footer span{
     .livro-container {
         padding: 10px;
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 50px;
     }
 
     .book-image {
         max-width: 100%;
-        float: none;
-        margin-right: 0;
-        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto; /* Centralizando a imagem */
+        margin-bottom: 20px; /* Espaçamento inferior */
     }
 
     .livro-detalhes {
