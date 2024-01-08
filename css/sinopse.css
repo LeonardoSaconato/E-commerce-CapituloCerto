@@ -100,7 +100,7 @@ footer span{
     filter: brightness(1.5);
 }
 
-/* Estilos para telas menores (como smartphones) */
+/* Estilos para telas menores (Como Smartphones) */
 @media screen and (max-width: 600px) 
 {
     .livro-container {
