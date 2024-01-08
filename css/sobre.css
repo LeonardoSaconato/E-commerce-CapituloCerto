@@ -35,7 +35,7 @@ main {
     width: 1200px;
     padding: 16px;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1.2em;
 }
 
 .carrossel{
@@ -52,26 +52,39 @@ main {
 
 .logo{
     scale: 0.8;
-    align-items: center;
     display: flex;
+    justify-content: center;
     cursor: pointer;
 }
-
 
 h1{
     color: #A69E32;
     text-align: center;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.692);
-    font-size: 2.2em;
+    font-size: 2.5em;
 }
 
 h2{
     color: #072b8b;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 p{
     text-align: justify;
+    font-size: 1.5em;
+
+}
+
+span > p{
+    margin-top: 12px;
+}
+
+
+ul {
+    margin-top: 12px;
+    padding-left: 22px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 footer {
@@ -80,14 +93,16 @@ footer {
     width: 100%; 
     height: auto;
     width: 100%;
+    gap: 25%;
     display: flex;
-    justify-content: center; 
     align-items: center;
     background-color: #232f3e;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 footer span{
+    font-size: 24px;
+    font-weight: bold;
     color: rgb(255, 255, 255);
     cursor: default;
     margin: 2%;
