@@ -229,6 +229,57 @@ body{
     cursor: pointer;
   }
 
+/* ---------- Estilos dinamicos ---------- */
+.helper-text {
+  font-size: .8rem;
+  color: darkred;
+}
+.required-popup::after {
+  content: "Preencha este campo";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #DFDFDF;
+  font-size: .65rem;
+  padding: .2rem .3rem;
+  width: auto;
+  display: block;
+  background-color: #202020;
+}
+
+input.error {
+  border: solid 2px #992020;
+  background-color: #9f7474;
+  color: #d3b7b7;
+}
+
+input.correct {
+  background-color: #BBCCBB;
+  border: solid 2px #206620;
+  color: #111;
+}
+
+.visible {
+  display: block;
+}
+
+/* Mostrar senha*/
+
+.password-image {
+  float: right;
+  margin: 10px 0;
+  margin-left: -80px;
+  height: 1.5rem;
+  opacity: 0.50;
+  transition: opacity 1s easeIn 1s;
+  cursor: pointer ;
+  
+}
+
+.password-image:hover{
+  opacity: 0.9;
+  color: #00008b;
+}
 
 
   

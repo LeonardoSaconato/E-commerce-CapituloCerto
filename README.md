@@ -28,17 +28,24 @@ Este repositório servirá para armazenar os códigos-fonte utilizados no projet
 ## Etapas do Projeto
 
 **Sprint-I: Definição do tema e desenvolvimento do Layout do projeto**
-* Data entrega: 26/10
+* Data entrega: 26/10/2023
 * Status: Entregue
 
 **Sprint-II: Criação da estrutura HTML das páginas**
-* Data entrega: 02/11
+* Data entrega: 02/11/2023
 * Status: Entregue
 
 **Sprint-III: Telas do E-commerce**
-* Data entrega: --
+* Data entrega: 05/12/2023
+* Status: Entregue
+
+**Sprint-IV: Validação de Formulários JS**
+* Data entrega: 09/01/2024
 * Status: --
 
+**Sprint-V: Entrega Final do Projeto**
+* Data entrega: --
+* Status: --
 
 ## Endereço da aplicação
 
