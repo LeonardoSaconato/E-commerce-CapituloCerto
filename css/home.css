@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 body{
     background: linear-gradient(to bottom, #000000,#000000,#ffffff);
@@ -8,21 +9,23 @@ body{
     width: 100%;
 }
 header {
-    width: auto;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around; 
     align-items: center;
     height: auto;
-    background-color: rgb(0, 0, 0);
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    z-index: 1000;
 }
-.logo{
+.logo a{
     scale: 0.8;
     align-items: center;
     display: flex;
     cursor: pointer;
 }
-h1{
+a h1{
     color: white;
 }
 h2{
@@ -88,11 +91,13 @@ nav ul li {
     margin-right: 10px; 
 }
 main {
+    margin-top: 75px;
     text-align: center;
     align-items: center;
 }
 .livros {
     padding: 2rem;
+    height:max-content;
     align-items: center;
     text-align: center;
     display: grid;
@@ -116,6 +121,9 @@ main {
     }
 }
 @media (max-width: 1000px){
+    main{
+        margin-top: 30%;
+    }
     header {
         display: flex;
         flex-direction: column;
@@ -145,8 +153,13 @@ main {
     }
 }
 @media (max-width: 740px){
+    main{
+        margin-top: 60%;
+    }
     .livros {
         grid-template-columns: 19rem;
+        padding: 0;
+        justify-content: center;
     }
 }
 .livros img{
@@ -159,6 +172,7 @@ main {
     cursor: pointer;
 }
 .info-livros{
+    height: 20rem;
     padding: 1.2rem;
     border-radius: 3%;
     background-color: rgb(255, 255, 255);
@@ -168,7 +182,17 @@ main {
 .info-livros *{
     margin-top: 0.5rem;
 }
-
+.itens-compra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adicionar-carrinho img{
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
 footer {
     height: auto;
     width: 100%;
@@ -178,10 +202,17 @@ footer {
     background: black;
     justify-content: space-between;
 }
-footer span{
+footer span {
     color: rgb(255, 255, 255);
     cursor: default;
     margin: 2%;
+}
+
+footer a span{
+    cursor: pointer;
+}
+footer a span:hover{
+    color: blue;
 }
 .redes img{
     width: 30px;
