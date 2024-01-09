@@ -22,20 +22,22 @@ header {
 }
 
 .logo{
-    scale: 0.8;
+    transform: scale(0.8);
     align-items: center;
     display: flex;
     cursor: pointer;
 }
 
-main {
+.sobre {
     background-color: white;
     border-radius: 16px;
     box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.651);
     width: 1200px;
     padding: 16px;
     margin: auto;
-    margin-top: 1.2em;
+    margin-top: 4em;
+    margin-bottom: 120px;
+
 }
 
 .carrossel{
@@ -51,7 +53,7 @@ main {
 }
 
 .logo{
-    scale: 0.8;
+    transform: scale(0.8);
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -107,7 +109,6 @@ footer span{
     cursor: default;
     margin: 2%;
 }
-
 .redes img{
     width: 30px;
     height: 30px;
@@ -115,4 +116,21 @@ footer span{
 }
 .redes-contato:hover{
     filter: brightness(1.5);
+}
+
+/* Estilos para telas maiores */
+@media screen and (max-width: 1200px) {
+    .sobre {
+        width: 90%;
+    }
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+    .sobre {
+        width: 95%;
+        margin-top: 2em;
+        margin-bottom: 80px;
+        padding: 10px;
+    }
 }

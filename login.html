@@ -33,10 +33,12 @@
                     <div class="form-inner">
                         <form action="index.html" class="login">
 							<div class="field">
-								<input type="text" name = "login_email" placeholder="Email" required>
+								<input type="text" id="email" name ="email" placeholder="Email" required>
+                                <p id="email-helper" class="helper-text"></p>
 							</div>
-							<div class="field">
-								<input type="password" name = "login_senha" placeholder="Senha" required>
+							<div class="field pass">
+								<input type="password" name ="pass" placeholder="Senha" required>
+                                <img src="https://i.stack.imgur.com/H9Sb2.png" alt="Olho para visualização da senha digitada" class="password-image">
 							</div>
 							<div class="pass-link"><a href="php/forgot-password.html">Esqueceu sua senha?</a></div>
 							<div class="field btn">
@@ -45,18 +47,25 @@
 							</div>
 							<div class="signup-link">Não tem cadastro? <a href="#cadastro">Cadastre se aqui</a></div>
                         </form>
+
                         <form action="index.html" class="signup" id="cadastro">
 							<div class="field">
-								<input type="text" name = "txt_nome" placeholder="Digite seu Nome" required>
+								<input type="text" id="name" name ="name" placeholder="Digite seu Nome" required>
+                                <p id="username-helper" class="helper-text"></p>
 							</div>
 							<div class="field">
-								<input type="text" name = "email" placeholder="Digite seu Email" required>
+								<input type="text" id="emaill" name = "email" placeholder="Digite seu Email" required>
+                                <p id="emaill-helper" class="helper-text"></p>
 							</div>
-							<div class="field">
-								<input type="password" name = "senha" placeholder="Digite a senha" required>
+							<div class="field pass">
+								<input type="password" id="senha" name = "senha" placeholder="Digite a senha" required>
+                                <img src="https://i.stack.imgur.com/H9Sb2.png" alt="Olho para visualização da senha digitada" class="password-image">
+                                <p id="senha-helper" class="helper-text"></p>
 							</div>
-							 <div class="field">
-								<input type="password" name = "senha2" placeholder="Confirme a senha" required>
+							 <div class="field pass">
+								<input type="password" id="senha2" name = "senha2" placeholder="Confirme a senha" required>
+                                <img src="https://i.stack.imgur.com/H9Sb2.png" alt="Olho para visualização da senha digitada" class="password-image">
+                                <p id="confirma-senha-helper" class="helper-text"></p>
 							</div> 
 							<div class="field btn">
 								<div class="btn-layer"></div>

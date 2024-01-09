@@ -16,7 +16,7 @@ header {
     position: relative;
 }
 .logo{
-    scale: 0.8;
+    transform: scale(0.8);
     align-items: center;
     display: flex;
     cursor: pointer;
@@ -100,7 +100,7 @@ footer span{
     filter: brightness(1.5);
 }
 
-/* Estilos para telas menores (como smartphones) */
+/* Estilos para telas menores (Como Smartphones) */
 @media screen and (max-width: 600px) 
 {
     .livro-container {
