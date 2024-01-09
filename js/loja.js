@@ -6,7 +6,11 @@ if(document.readyState == "loading"){ //Verificação feita para que caso o HTML
 
 var totalAmout = "0,00"
 
+
 function ready(){
+    updateTotal();
+    loadCartFromLocalStorage();
+    
     const removeProductButtons = document.getElementsByClassName("button-remover-prod")
     for (var  i = 0; i < removeProductButtons.length; i++){
     removeProductButtons[i].addEventListener("click", removeProduct)}
@@ -23,9 +27,8 @@ function ready(){
 
     const purchaseButton = document.getElementsByClassName("botao-comprar")[0]
     purchaseButton.addEventListener("click", makePurchase)
+
 }
-
-
 
 
 function makePurchase(){//função criada para a funcionalidade do button "botao-comprar", que finaliza a compra, condicional para que se o carrinho esteja vazio dispara a mensagem de que o carrinho está vazio e nao deixa prosseguir a compra.
@@ -33,7 +36,7 @@ function makePurchase(){//função criada para a funcionalidade do button "botao
     if(totalAmout == "0,00"){
         alert("Seu carrinho está vazio!")
     } else {
-        alert(//crase é utilizada para chamar variavel dentro da STR.       
+        alert(//succes message       
             `
             Obrigado pela sua compra <3
             Valor do pedido: R$${totalAmout}
@@ -45,7 +48,57 @@ function makePurchase(){//função criada para a funcionalidade do button "botao
     document.querySelector(".table-carrin tbody").innerHTML = ""//Funcionalidade para resetar o carrinho assim que a compra for finalizada
     updateTotal();
 }
+function loadCartFromLocalStorage() {
+    const produtos = [];
+    let i = 0;
 
+    while (true) {
+        const nome = localStorage.getItem(`nome_${i}`);
+        const preco = localStorage.getItem(`preco_${i}`);
+        const img = localStorage.getItem(`img${i}`);
+
+        if (nome === null || preco === null || img === null) {
+            break;  // Se algum dos itens não existir, sai do loop
+        }
+
+        produtos.push({ nome, preco, img });
+        i++;
+    }
+
+    // Adiciona os produtos ao carrinho
+    for (let i = 0; i < produtos.length; i++) {
+        const produto = produtos[i];
+        createCartItem(produto.nome, produto.preco, produto.img);
+    }
+}
+
+function createCartItem(nome_0, preco_0, img0) {
+    const newCartProduct = document.createElement("tr");
+    newCartProduct.classList.add("podruto-carrin");
+
+    newCartProduct.innerHTML =
+        `
+        <td class="identificacion-produto">
+            <img src="${img0}" class="imagem-prod-carrin">
+            <strong class="titulo-prod-carrin">${nome_0}</strong>
+        </td>
+        <td>
+            <span class="preco-prod-carrin">${preco_0}</span>
+        </td>
+        <td>
+            <input type="number" value="1" min="0" class="prod-qtd-input">
+            <button type="button" class="button-remover-prod">Remover</button>
+        </td>
+    `;
+
+    const tableBody = document.querySelector(".table-carrin tbody");
+    tableBody.appendChild(newCartProduct);
+
+    newCartProduct.getElementsByClassName("prod-qtd-input")[0].addEventListener("change", checkIfInputIsNull);
+    newCartProduct.getElementsByClassName("button-remover-prod")[0].addEventListener("click", removeProduct);
+
+    updateTotal();
+}
 
 //função para retirar produto do carrinho caso o valor do input de qtd_prod  seja igual a 0.
 function checkIfInputIsNull(event){
@@ -57,6 +110,14 @@ function checkIfInputIsNull(event){
 }
 
 function addProductToCart(event){
+    const addToCartButtons = document.querySelectorAll('.button-hover-background');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const productTitle = this.parentElement.parentElement.querySelector('.product-titulo').innerText;
+            const productPrice = parseFloat(this.getAttribute('data-price'));
+            CarrinhoDeCompras.addBookToCart(productTitle, productPrice);
+        });
+    });
     const button = event.target
     const productInfos = button.parentElement.parentElement
     const prodImage = productInfos.getElementsByClassName("product-imagem")[0].src //Acessado posicao 0 do elemento que e onde fica a img, 
@@ -73,7 +134,7 @@ function addProductToCart(event){
     }
 
     let newCartProduct = document.createElement("tr")//Criado elemento TR, com let pois o valor será mudado
-    newCartProduct.classList.add("podruto-carrin")//Aq a classe que será add ao elmento tr está defininda.
+    newCartProduct.classList.add("podruto-carrin")//Aq a classe que será add ao elmento tr está definida.
 
     newCartProduct.innerHTML = 
     `

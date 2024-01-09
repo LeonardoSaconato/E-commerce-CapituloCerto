@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Rock+Salt&display=swap');
+
 
 :root {
   
@@ -35,7 +35,7 @@ button {
 /* Header */
 .main-header {
   background-position: 50% 39%;
-  background: var(--gray);
+  background: black ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +46,7 @@ button {
 }
 
 .header-list-container {
+  width: 100%;
   padding: 16px 0;
   display: flex;
   align-items: center;
@@ -84,7 +85,7 @@ hr {
 .main-section {
   padding: 40px 0 64px;
   background: rgb(255,255,255);
-  background: linear-gradient(180deg,rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(180deg, black 24%, rgba(255,255,255,1) 80%);
 }
 
 .container {
@@ -95,7 +96,6 @@ hr {
 
 .section-titulo {
   color: var(--white);
-  font-family: "Rock Salt", cursive;
   font-size: 32px;
   text-align: center;
   text-transform: uppercase;
@@ -120,9 +120,9 @@ hr {
 }
 
 .title {
-  font-family: "Rock Salt", cursive;
   color: var(--white);
 }
+
 
 .list-container {
   display: flex;
@@ -172,6 +172,8 @@ hr {
 }
 
 .products-container {
+  width: fit-content;
+  padding: 4px;
   display: flex;
   flex-wrap: wrap; /* Flex wrap coloca 2 livros por linha, pq a seção tem 600px */
   justify-content: space-between;
@@ -194,12 +196,8 @@ hr {
 }
 
 
-#left{
-  border-left: none;
-}
-#right{
-  border-right: none;
-}
+
+
 
 .product-title {
   font-size: 20px;
@@ -235,6 +233,11 @@ hr {
 span{
   padding: 0;
   font-size: 1.5em;
+}
+
+.fot:hover{
+  color: #111111;
+  transition: .3s;
 }
 
 .button-hover-background {
@@ -369,10 +372,17 @@ span{
 
 
 
-/* Responsividade */
+/* media queries */
+
+
 @media (max-width: 584px) {
   .movie-title-large {
     font-size: 36px;
+  }
+  #cont{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .schedule-item {
@@ -390,9 +400,8 @@ span{
     padding: 12px 2px;
   }
 
-
-  .products-container {
-    justify-content: center;
+  .products-container{
+    width: 250px;
   }
 
   .identificacion-produto {
@@ -413,6 +422,7 @@ span{
     display: block;
     margin: 8px auto 0;
   }
+
 }
 
 @media (max-width: 470px) {
@@ -426,5 +436,13 @@ span{
 
   .movie-title-medium {
     margin-bottom: 16px;
+  }
+
+  #tile{
+    font-size: 20px !important;
+  }
+
+  #title{
+    font-size: 20px;
   }
 }
