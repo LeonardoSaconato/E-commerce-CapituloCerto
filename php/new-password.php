@@ -10,7 +10,7 @@ if($email == false){
 <head>
     <meta charset="UTF-8">
     <title>Capítulo Certo</title>
-    <link rel="shortcut icon" type="imagex/png" href="imagens/logo.png"> 
+    <link rel="shortcut icon" type="imagex/png" href="../imagens/logo.png">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/reset-password.css">
 </head>

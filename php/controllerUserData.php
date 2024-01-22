@@ -12,7 +12,7 @@ if(isset($_POST['signup'])){
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $cpassword = mysqli_real_escape_string($con, $_POST['cpassword']);
     if($password !== $cpassword){
-        $errors['password'] = "as senhas que você inseriu não correspondem. Por favor, verifique e tente novamente.!";
+        $errors['password'] = "as senhas que você inseriu não correspondem. Por favor, verifique e tente novamente!";
     }
     $email_check = "SELECT * FROM usertable WHERE email = '$email'";
     $res = mysqli_query($con, $email_check);
@@ -64,7 +64,7 @@ if(isset($_POST['signup'])){
             if($update_res){
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $email;
-                header('location: home.php');
+                header('location: ../loja.php');
                 exit();
             }else{
                 $errors['otp-error'] = "Falha ao enviar o código!";
@@ -74,8 +74,8 @@ if(isset($_POST['signup'])){
         }
     }
 
-   //Quando o Usuário clicar no botão de Login
-   if(isset($_POST['login'])){
+ // Quando o Usuário clicar no botão de Login
+if(isset($_POST['login'])){
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $check_email = "SELECT * FROM usertable WHERE email='$email'";
@@ -87,15 +87,15 @@ if(isset($_POST['signup'])){
             $_SESSION['email'] = $email;
             $status = $fetch['status'];
             if($status == 'verified'){
-              $_SESSION['email'] = $email;
-              $_SESSION['password'] = $password;
-                header('location: home.php');
+                $_SESSION['email'] = $email;
+                $_SESSION['password'] = $password;
+                header('location: ../loja.php');
             } 
             else{
                 $info = "Parece que você ainda não verificou seu e-mail - $email";
                 $_SESSION['info'] = $info;
                 header('location: user-otp.php');
-
+                exit();
             }
         }else{
             $errors['email'] = "O E-mail ou senha digitado está incorreto!";
@@ -181,5 +181,7 @@ if(isset($_POST['signup'])){
    //Se o usuário clicar para logar após redefinir a senha.
     if(isset($_POST['login-now'])){
         header('Location: login-user.php');
-    }
+}
+
 ?>
+

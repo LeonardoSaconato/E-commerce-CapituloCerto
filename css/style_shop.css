@@ -12,17 +12,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #eee;
 }
 
 body, button, input, textarea {
   font: 400 16px "Roboto", sans-serif;
 }
 
+.fab{
+  text-decoration: none;
+}
 li {
   list-style-type: none;
   
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -83,16 +86,13 @@ hr {
 
 /* Main */
 .main-section {
+  min-height: 100vh;
   padding: 40px 0 64px;
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, black 24%, rgba(255,255,255,1) 80%);
+  background: #111111;
+  /*background: linear-gradient(180deg, black 24%, rgba(255,255,255,1) 80%);*/
 }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 16px
-}
+
 
 .section-titulo {
   color: var(--white);
@@ -105,7 +105,7 @@ hr {
 
 /*  Footer  */
 .main-footer {
-  background: var(--gray);
+  background: black;
   padding: 16px 0;
 }
 
@@ -125,9 +125,7 @@ hr {
 
 
 .list-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0;
   position: relative; 
   display: block;
   width: 60px;
@@ -259,14 +257,10 @@ span{
 /* tabela carrinho de compras */
 .table-carrin {
   width: 100%;
-  border-collapse: collapse;
-  border: solid 5px black;
-  box-shadow: 2px 2px 3px 3px #333;
-
 }
 
 .cabess-do-item {
-  text-align: start;
+  text-align: center;
   border-bottom: 1px solid var(--gray);
   padding-bottom: 6px;
   text-transform: uppercase;
@@ -280,7 +274,7 @@ span{
 
 .podruto-carrin td {
   padding: 8px 0;
-  margin: 12px 12px ;
+  margin: 12px 2px 12px 3px;
 }
 
 .identificacion-produto {
@@ -307,6 +301,7 @@ span{
 }
 
 .prod-qtd-input {
+  color: #111111;
   width: 48px;
   height: 34px;
   border-radius: 6px;
@@ -351,26 +346,51 @@ span{
 }
 
 .botao-comprar {
+  width: 50% !important;
   display: flex;
-  margin: 24px auto 0;
+  margin: 0;
   background: #333;
   color: white;
   border: 0;
   border-radius: 6px;
   padding: 16px 20px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   box-shadow: black 1.5px 1.2px 1.3px;
+  justify-content: center;
 }
 
 .botao-comprar:hover {
   transition: .8s;
-  background: rgb(158, 235, 4);
-  box-shadow: olive 3px 3px 3px ;
+  background: #1756ED;
+  box-shadow: #225adc;
 }
-
-
+.back{
+  width: 50% !important;
+  display: flex;
+  margin: 0;
+  background: #333;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 16px 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: black 1.5px 1.2px 1.3px;
+  justify-content: center;
+}
+.back {
+  transition: .8s;
+  background: #1756ED;
+  box-shadow: #225adc;
+}
+#cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* media queries */
 
@@ -395,7 +415,8 @@ span{
   }
 
   .botao-comprar {
-    width: 60%;
+    width: 100% !important;
+    font-size: 12px;
     margin-top: 12px;
     padding: 12px 2px;
   }
@@ -425,11 +446,73 @@ span{
 
 }
 
+.user_img {
+  width: 40px; 
+  height: 40px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-user{
+  text-decoration: none;
+  color: #ffffff;
+  display: block; 
+}
+
+.menu {
+  position: relative;
+  margin-top: -1px;
+  margin-right: -2px;
+  > .menu-trigger {
+      display: inline-grid;
+      place-items: center;
+      padding: 1px;
+      border-radius: 0.3em;
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+      cursor: pointer;
+  }
+  > .menu-menu {
+      background: #111;
+      border-radius: 0.3em;
+      position: absolute;
+      margin-top: 0.5em;
+      display: block;
+      transition: opacity 0.3s ease;
+      > li {
+          padding: 0.4em 0.8em;
+      }
+  }
+  &[data-aberto="true"] {
+      > .menu-trigger > .fa-plus {
+          display: none;
+      }
+      > .menu-menu {
+          opacity: 1;
+          visibility: visible;
+      }
+  }
+  &[data-aberto="false"] {
+      > .menu-trigger > .fa-minus {
+          display: none;
+      }
+      > .menu-menu {
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s step-end;
+      }
+  }
+}
+
+
 @media (max-width: 470px) {
   .about-movie-image {
     width: 160px;
   }
-
+  .preco-prod-carrin{
+    padding: 5px !important;
+  }
   .main-footer-container {
     flex-direction: column;
   }
@@ -444,5 +527,14 @@ span{
 
   #title{
     font-size: 20px;
+  }
+  .cabess-do-item{
+    font-size: 9px !important;
+  }
+  .button-remover-prod{
+    font-size: 10px;
+  }
+  .titulo-prod-carrin{
+    font-size: 10px;
   }
 }

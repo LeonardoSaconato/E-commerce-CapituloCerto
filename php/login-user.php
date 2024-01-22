@@ -60,39 +60,13 @@
 							<div class="pass-link"><a href="forgot-password.php">Esqueceu sua senha?</a></div>
 							<div class="field btn">
 								<div class="btn-layer"></div>
-								<input type="submit" name="login" value="Login">
+								<input type="submit" id="login" name="login" value="Login">
 							</div>
 							<div class="signup-link">Não tem cadastro? <a href="signup-user.php">Cadastre se aqui</a></div>
                         </form>
 
-                        
                         <form action="signup-user.php" method="POST" autocomplete="" class="signup" id="cadastro">
-                        <?php require_once "controllerUserData.php"; ?>
-                        <?php
-                            if(count($errors) == 1){
-                        ?>
-                        <div class="alert alert-danger text-center">
-                            <?php
-                            foreach($errors as $showerror){
-                                echo $showerror;
-                            }
-                            ?>
-                        </div>
-                        <?php
-                         }elseif(count($errors) > 1){
-                        ?>
-                        <div class="alert alert-danger">
-                            <?php
-                            foreach($errors as $showerror){
-                                ?>
-                                <li><?php echo $showerror; ?></li>
-                                <?php
-                            }
-                            ?>
-                        </div>
-                        <?php
-                    }
-                    ?>
+                      
 							<div class="field">
 								<input type="text" id="name" name="name" placeholder="Digite seu Nome" required value="<?php echo $name ?>">
                                 <p id="username-helper" class="helper-text"></p>
@@ -123,5 +97,5 @@
         </div>        
    </div>
 </body>
-<script src="../js/login.js" defer></script>
+<script src="../js/login.js"></script>
 </html>

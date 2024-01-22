@@ -1,4 +1,4 @@
-//Form Rotate = Animação rotacionar formulário login - cadastro
+//Form Rotate = = Animação rotacionar formulário login - cadastro
 const loginText = document.querySelector(".title-text .login");
 const loginForm = document.querySelector("form.login");
 const loginBtn = document.querySelector("label.login");
@@ -16,6 +16,7 @@ signupLink.onclick = (()=>{
   signupBtn.click();
   return false;
 });
+
 
 //Função para mostrar e ocultar popup de campo obrigatório
 function mostrarPopup(input) {
@@ -69,11 +70,15 @@ function validarEmail(emailId, emailHelperId) {
         emailInput.classList.remove("error");
         emailHelper.classList.remove("visible");
         emailHelper.innerText = '';
+        
+        
       } else {
         emailInput.classList.remove("correct");
         emailInput.classList.add("error");
         emailHelper.classList.add("visible");
         emailHelper.innerText = "coloque um endereço de email válido, ele deve conter '@' e '.com'";
+       
+        
       }
     });
   }
@@ -83,12 +88,10 @@ function validarEmail(emailId, emailHelperId) {
   validarEmail('emaill', 'emaill-helper');
 
 
-
-
 //Validação Campo Senha
 
-const senhaInput = document.querySelector('input[name="senha"]');
-const senha2Input = document.querySelector('input[name="senha2"]');
+const senhaInput = document.querySelector('#pass');
+const senha2Input = document.querySelector('#cpass');
 const senhaHelper = document.getElementById('senha-helper');
 const confirmaSenhaHelper = document.getElementById('confirma-senha-helper');
 
@@ -96,7 +99,7 @@ function validarSenha(senha, helperElement) {
   if (senha.length < 8 || !/[a-z]/.test(senha) || !/[A-Z]/.test(senha) || !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(senha)) {
     senhaInput.classList.add("error");
     helperElement.classList.add("visible");
-    helperElement.innerText = "A senha deve ter pelo menos 8 caracteres!";
+    helperElement.innerText = "Senha mínimo: 8 caracteres (1 Maiúscula, Minuscula e Carácter Especial)!";
     senhaInput.classList.remove("correct");
   } else {
     senhaInput.classList.add("correct");
@@ -122,6 +125,7 @@ senha2Input.addEventListener("input", () => {
     senha2Input.classList.add("correct");
     confirmaSenhaHelper.classList.remove("visible");
     senha2Input.classList.remove("error");
+    confirmaSenhaHelper.innerText ="";
   }
 });
 
@@ -139,3 +143,18 @@ imgs.forEach(function (img, index) {
 });
 
 
+
+// Função para gerar e armazenar um novo token no localStorage
+function generateAndStoreToken() {
+  const token = Math.random().toString(36).substring(2);
+  localStorage.setItem('token', token);
+  console.log('Token gerado e armazenado: ' + token);
+}
+
+// Adiciona um ouvinte de evento aos botões usando o atributo "name"
+document.getElementsByName('login')[0].addEventListener('click', generateAndStoreToken);
+document.getElementsByName('signup')[0].addEventListener('click', generateAndStoreToken);
+
+// Exibe o token atualmente armazenado no localStorage
+const storedToken = localStorage.getItem('token');
+console.log('Token atualmente armazenado: ' + storedToken);
