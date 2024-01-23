@@ -39,7 +39,7 @@ if($email != false && $password != false){
 <body>
     <header>
         <div class="logo">
-            <a href="../index.html">
+            <a href="home.php">
                 <img src="imagens/logo.png" alt="logo" id="logo">
                 <span>
                     <h1>Capítulo Certo</h1>
