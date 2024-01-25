@@ -33,7 +33,7 @@ if($email != false && $password != false){
     <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet" href="css/style-modal.css">
     <script src="js/script-modal.js" defer></script>
-    <script src="js/logout-user" defer></script>
+   
 </head>
 
 <body>
@@ -202,6 +202,7 @@ if($email != false && $password != false){
             </ul>
         </nav>
     </footer>
+    <script src="js/logout-user"></script>
 </body>
 
 </html>
